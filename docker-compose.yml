@@ -28,9 +28,9 @@ services:
     expose:
       - 9000
     volumes:
-#      - ./etc/php/php.ini:/usr/local/etc/php/conf.d/php.ini
       - ${WWW_DIR}:/var/www/html
       - ./php/php.ini:/usr/local/etc/php/php.ini
+      - ./log/php:/var/log
 
   myadmin:
     image: phpmyadmin/phpmyadmin
